@@ -13,7 +13,7 @@ startup
 
 start
 {
-    if (current.ongoingGame == 0U) return false;
+    if (!(old.ongoingGame == 0U && current.ongoingGame != 0U)) return false;
 
     vars.challenge = current.ongoingChallenge != 0;
     return true;
