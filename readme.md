@@ -10,6 +10,6 @@ This repository holds auto splitters used for speedrun categories of ~~Bejeweled
 
 Unfortunately the author has only non-Steam version of Bejeweled Twist so whether this auto splitter supports Steam version is unknown. If it doesn't, and you figure out how to make it work on Steam version, feel free to open a pull request.
 
-Timing starts upon entering any level. Split takes place when you beat any level. Timing resets upon returning to the main menu. If you want to split upon beating a whole planet rather than beating a single challenge, check "Don't split upon beating challenges 1-6" in auto splitter settings.
+Timing starts upon entering any level. Split is triggered when you beat any level. Timing resets upon returning to the main menu while you haven't got any stars in your profile (in favor of Unlock%). If you want to split upon beating a whole planet rather than beating a single challenge, check "Don't split upon beating challenges 1-6" in auto splitter settings.
 
-This auto splitter doesn't support Boggy's Counterclockwise Extension. There's no plan to support it until there are CCW categories on speedrun.com.
+This auto splitter doesn't support Boggy's Counterclockwise Extender. There's no plan to support it until there are CCW categories on speedrun.com.

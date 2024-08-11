@@ -1,9 +1,9 @@
 state("BejeweledTwist")
 {
-    uint ongoingGame : 0x45AEF4;
+    uint ongoingGame     : 0x45AEF4;
     int ongoingChallenge : 0x45AEF4, 0x2678;
-    float logoOpacity : 0xA0B698, 0xC70, 0x3C8, 0x15C;
-    int stars : 0xA0B698, 0x7EC, 0x160;
+    int stars            : 0xA0B698, 0x7EC, 0x160;
+    float logoOpacity    : 0xA0B698, 0xC70, 0x3C8, 0x15C;
 }
 
 startup
@@ -27,5 +27,5 @@ split
 
 reset
 {
-    return old.logoOpacity == 0f && current.logoOpacity > 0f;
+    return old.logoOpacity == 0f && current.logoOpacity > 0f && current.stars > 0;
 }
