@@ -1,9 +1,9 @@
 state("BejeweledTwist")
 {
-    uint ongoingGame     : 0x45AEF4;
-    int ongoingChallenge : 0x45AEF4, 0x2678;
-    int stars            : 0xA0B698, 0x7EC, 0x160;
-    float logoOpacity    : 0xA0B698, 0xC70, 0x3C8, 0x15C;
+    uint  ongoingGame      : 0x45AEF4;
+    int   ongoingChallenge : 0x45AEF4, 0x2678;
+    int   stars            : 0xA0B698, 0x7EC, 0x160;
+    float logoOpacity      : 0xA0B698, 0xC70, 0x3C8, 0x15C;
 }
 
 startup
@@ -15,6 +15,7 @@ startup
 start
 {
     if (!(old.ongoingGame == 0U && current.ongoingGame != 0U)) return false;
+    if (current.ongoingChallenge == 8) return false;
 
     vars.challenge = current.ongoingChallenge != 0;
     return true;

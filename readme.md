@@ -10,7 +10,7 @@ This repository holds auto splitters used for speedrun categories of ~~Bejeweled
 
 This auto splitter only supports non-Steam version. If you can adapt it to Steam version, feel free to open a pull request.
 
-* Timing starts upon entering any level.
+* Timing starts upon entering any level except Eclipse challenges.
 * Split is triggered when you beat any level.
   * If you want to split upon beating a whole planet rather than beating a single challenge, check "Don't split upon beating challenges 1-6" in auto splitter settings.
 * Timing resets upon returning to the main menu while you haven't got any stars in your profile (in favor of Unlock%).
@@ -31,14 +31,14 @@ Check "Classic & Zen autosplit" in auto splitter settings to enable auto splitti
 
 * Timing starts when you enter Level 1 and haven't got any points.
 * Split is triggered when you beat a level.
-  * If you check "Score run instead of level run" in auto splitter settings, split is triggered when you reach certain scores instead. You must name your splits the score thresholds you want, and they have to be decimal positive integers in ascending order. If the split names don't obey this rule, timing will not start when you enter Level 1.
+  * If you check "Score attack" in auto splitter settings, split is triggered when you reach certain scores instead. You must name your splits the score thresholds you want, and they have to be decimal positive integers in ascending order. If the split names don't obey this rule, timing will not start when you enter Level 1.
 * Timing resets upon returning to the game mode menu or having No More Moves.
 
 ### Quest
 
 Check "Quest autosplit" in auto splitter settings to enable auto splitting in Quest mode.
 
-* Timing starts when you enter Quest mode and haven't beaten any quests.
+* Timing starts when you enter Quest mode.
 * Split is triggered when beat a quest.
   * If you check "Split upon switching to a new relic" in auto splitter settings, split is triggered when you switch to a new relic instead.
   * The last split is triggered when the "50%" text appears if "50% instead of 100%" is checked, or when the "QUEST MODE COMPLETE" text appears if not. If you uncheck "Split upon switching to a new relic", beating your last quest doesn't immediately trigger a split.
@@ -48,7 +48,7 @@ Check "Quest autosplit" in auto splitter settings to enable auto splitting in Qu
 
 Check "Split upon unlocking a Secret Mode" in auto splitter settings to enable auto splitting for the "Unlock All Modes" category. If checked, the auto splitter will not work as above when you play Classic, Zen or Quest mode.
 
-* Timing starts when you enter any mode.
+* Timing starts when you enter any mode and haven't unlocked any Secret Modes.
 * Split is triggered when you unlock a Secret Mode.
 * Reset is not implemented yet. If you know how to detect if the player returns to the main menu, feel free to open a pull request.
 

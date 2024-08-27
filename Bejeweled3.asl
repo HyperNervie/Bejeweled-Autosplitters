@@ -29,7 +29,8 @@ startup
     settings.SetToolTip("quest.per_relic", "Uncheck to split upon beating a quest (except your last one)");
 
     settings.Add("classic_zen", true, "Classic & Zen autosplit");
-    settings.Add("classic_zen.point", false, "Score run instead of level run", "classic_zen");
+    settings.Add("classic_zen.point", false, "Score attack", "classic_zen");
+    settings.SetToolTip("classic_zen.point", "Uncheck to split upon beating a level");
 
     vars.count = new Func<byte[], int>(arr => Array.FindAll(arr, new Predicate<byte>(b => b != 0)).Length);
     vars.modeChecker = new Func<uint[], Predicate<dynamic>>(modes =>
@@ -49,8 +50,7 @@ init
 
 start
 {
-    bool questStarted = old.questMode == 0U && current.questMode != 0U
-        && vars.count(current.completedQuests) == 0;
+    bool questStarted = old.questMode == 0U && current.questMode != 0U;
     dynamic started;
 
     if (settings["secret"])
